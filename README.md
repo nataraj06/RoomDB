@@ -23,6 +23,11 @@ Room provides an abstraction layer over SQLite to allow fluent database access w
 
 ## Bench mark comparison for Android ORM Frameworks
 
+#The below is the testcases
+* Simple - 1 Library object per 1000 Book objects
+* Complex - 1 Library object for 500 Book objects and 400 Person objects (5 Libraries, 2500 Books, 2000 Persons)
+* Balanced - 1 Library object for 50 Book objects and 50 Person objects (50 Libraries, 2500 Books, 2500 Persons)
+
 |Library|write(s)|read(s)|update(s)|delete(s)|write(c)|read(c)|update(c)|delete(c)|write(b)|read(b)|update(b)|delete(b)|
 |:-----:|:------:|:-----:|:-------:|:-------:|:------:|:-----:|:-------:|:-------:|:------:|:-----:|:-------:|:-------:|
 |ORMLite|151|666|122|105|445|3836|857|811|1563|3426|724|728|
@@ -36,6 +41,8 @@ Room provides an abstraction layer over SQLite to allow fluent database access w
 |Sprinkles|5766|1050|6364|605|25978|4334|65579|2428|27774|4526|37705|2519|
 |Room|131|699|170|109|562|3201|717|403|1330|3532|790|507|
 |SQLite|50|436|63|80|386|2155|192|284|1146|2313|213|318|
+
+[Please refer this for full explanation](https://github.com/AlexeyZatsepin/Android-ORM-benchmark) 
 
 ### components of RoomDb in android
 
